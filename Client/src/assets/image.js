@@ -1,0 +1,1 @@
+export const HeroImage = "https://ik.imagekit.io/4z8covdo9/Full%20stack/home-img.png?updatedAt=1704636647536";
