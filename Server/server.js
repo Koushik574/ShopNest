@@ -63,7 +63,7 @@ app.use(cors({
   optionsSuccessStatus: 200
 }));
 
-app.post('/api/contact', async (req, res) => {
+app.post('/contact', async (req, res) => {
   const { username, mail, phnumber, message } = req.body;
 
   try {
