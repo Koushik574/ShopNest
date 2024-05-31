@@ -7,7 +7,7 @@ import AppLayout from "../layout/AppLayout";
 // import { createBrowserRouter } from "react-router-dom";
 import About from "../components/About/About";
 import ViewCart from "../components/ViewCart/ViewCart";
-import Login from "../components/Login/Login";
+
 
 const ProductPage = lazy(() => import("../components/ProductCardContainer/ProductCardContainer"));
 
@@ -40,11 +40,6 @@ const routes = [ {
       path:"/cart",
       element: <ViewCart />
     },
-    {
-    path:"login",
-    element: <Login />
-  }
-
   ],
   errorElement: <Error />
 },]
