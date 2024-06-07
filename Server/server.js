@@ -36,10 +36,14 @@ const pool = new Pool({
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://shopnest-8qfn.onrender.com",
+    origin: ['http://localhost:5173','https://shop-nest-sigma.vercel.app'],
     optionsSuccessStatus: 200,
   })
 );
+
+app.get("/",(req,res)=>{
+  res.send("V1 - Working")
+})
 
 // Endpoint to handle contact form submission
 app.post("/api/contact", async (req, res) => {
