@@ -61,13 +61,13 @@ console.log({
 
 const pool = new Pool({
   user: process.env.DB_USER,
-  host: process.env.DB_HOST,
+  host: '127.0.0.1',
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
   port: process.env.DB_PORT,
 });
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors({
   origin: 'https://shopnest-8qfn.onrender.com',
   optionsSuccessStatus: 200
@@ -75,6 +75,7 @@ app.use(cors({
 
 app.post('/api/contact', async (req, res) => {
   const { username, mail, phnumber, message } = req.body;
+  console.log(username, mail, phnumber, message)
 
   try {
     await pool.query('INSERT INTO contacts (username, mail, phnumber, message) VALUES ($1, $2, $3, $4)', [username, mail, phnumber, message]);
