@@ -137,6 +137,8 @@ const Contact = () => {
   });
 
   const onSubmit = async (data) => {
+    console.log(data)
+
     try {
       // const response = await axios.post('http://localhost:5000/api/contact', data);
       const response = await axios.post('https://shopnest-8qfn.onrender.com/api/contact', data);
