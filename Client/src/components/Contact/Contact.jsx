@@ -139,7 +139,7 @@ const Contact = () => {
   const onSubmit = async (data) => {
     try {
       // const response = await axios.post('http://localhost:5000/api/contact', data);
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/contact`, data);
+      const response = await axios.post('https://shopnest-8qfn.onrender.com/api/contact', data);
       if (response.status === 201) {
         alert('Message sent successfully');
       }
